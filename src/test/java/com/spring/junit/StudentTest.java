@@ -1,8 +1,6 @@
 package com.spring.junit;
 
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -13,11 +11,11 @@ class StudentTest {
     @BeforeAll
     static void beforeAll() {
 
-        System.out.println(" @BeforeAll...........");
+        System.out.println("@BeforeAll...........");
     }
 
     @BeforeEach
-    void setUp() {
+    void setUpFunction() {
         student=new Student();
         System.out.println(" @BeforeEach...........");
 
@@ -31,5 +29,18 @@ class StudentTest {
     @Test
     void getAge() {
         System.out.println(student.getAge());
+    }
+    @AfterEach
+    void tearDown() {
+        System.out.println("@AfterEach......................");
+
+
+    }
+
+    @AfterAll
+    static void afterAll() {
+        System.out.println("@AfterAll......................");
+
+
     }
 }
