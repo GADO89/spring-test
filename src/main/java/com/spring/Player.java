@@ -5,12 +5,9 @@ import java.util.List;
 
 public class Player {
 
-    String name;
+   // String name;
     private List<String> players = new LinkedList<>();
 
-    public Player(String name) {
-        this.name=name;
-    }
 
     public Player(){
         players.add("Treka");
@@ -21,18 +18,14 @@ public class Player {
 
 
 
-    public Player getName(String name){
+    public String getName(String name){
         for (int i=0;i<players.size();i++){
             if(players.get(i).equals(name)){
-                return new Player(players.get(i));
+                return players.get(i);
             }
         }
         return null;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        Player player= (Player) o;
-        return name.equals(player.name);
-    }
+
 }
