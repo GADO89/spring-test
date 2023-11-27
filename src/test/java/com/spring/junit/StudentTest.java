@@ -6,7 +6,31 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class StudentTest {
 
+    @Test
+      void testing(){
+          Student student=new Student();
 
+         Assertions.assertAll("Student Data",
+                 ()-> Assertions.assertEquals(student.getName(), "eslam", "name not machtes"),
+                 ()-> Assertions.assertEquals(student.getAge(), "21", "age not machtes"));
+      }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
     private    Student student;
 
     @BeforeEach
@@ -26,6 +50,5 @@ class StudentTest {
         //Assertions.assertEquals(student.getAge(),"22", "Age not Matches");
         Assertions.assertTrue("22".equals(student.getAge()),()->"Age not Matches");
 
-    }
+    */}
 
-}
