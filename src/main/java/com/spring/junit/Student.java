@@ -31,4 +31,7 @@ public class Student {
             return null;
         }
     }
+    public void getException(){
+        throw new  SpecislException();
+    }
 }
