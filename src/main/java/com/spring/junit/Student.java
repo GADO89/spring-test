@@ -21,4 +21,14 @@ public class Student {
     public  void setAge(int age) {
         Student.age = String.valueOf(age);
     }
+
+    public String findById(int id){
+        if (id==5){
+            return "Eslam";
+        } else if (id ==6){
+     return "Ahmed";
+        } else {
+            return null;
+        }
+    }
 }
