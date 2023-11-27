@@ -4,7 +4,7 @@ public class Student {
 
   private   static String name="Eslam";
 
-   private static int age=21;
+   private static String age="21";
 
     public  String getName() {
         return name;
@@ -14,11 +14,11 @@ public class Student {
         Student.name = name;
     }
 
-    public  int getAge() {
+    public  String getAge() {
         return age;
     }
 
     public  void setAge(int age) {
-        Student.age = age;
+        Student.age = String.valueOf(age);
     }
 }

@@ -8,39 +8,24 @@ class StudentTest {
 
 
     private    Student student;
-    @BeforeAll
-    static void beforeAll() {
-
-        System.out.println("@BeforeAll...........");
-    }
 
     @BeforeEach
     void setUpFunction() {
         student=new Student();
-        System.out.println(" @BeforeEach...........");
 
     }
 
     @Test
     void getName() {
-        System.out.println(student.getName());
+        // Assertions.assertEquals(student.getName(),"eslam", "Name not Matches");
+        Assertions.assertTrue("eslam".equals(student.getName()),()->"Name not Matches");
     }
 
     @Test
     void getAge() {
-        System.out.println(student.getAge());
-    }
-    @AfterEach
-    void tearDown() {
-        System.out.println("@AfterEach......................");
-
+        //Assertions.assertEquals(student.getAge(),"22", "Age not Matches");
+        Assertions.assertTrue("22".equals(student.getAge()),()->"Age not Matches");
 
     }
 
-    @AfterAll
-    static void afterAll() {
-        System.out.println("@AfterAll......................");
-
-
-    }
 }
