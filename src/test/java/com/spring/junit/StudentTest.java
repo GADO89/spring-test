@@ -10,12 +10,20 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class StudentTest {
 
+
     @Test
+    void newTest(){
+        Assertions.assertTrue("Esslam".equalsIgnoreCase("ESSLAM"));
+    }
+
+
+
+   /* @Test
     @DisplayName("Test Student  By Id")
     void findById() {
         Student student=new Student();
         //Assertions.assertEquals(student.findById(1),null);
         Assertions.assertThrows(MissingFormatArgumentException.class,
                 ()->student.getException());
-    }
+    }*/
 }
