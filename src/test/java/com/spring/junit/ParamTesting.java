@@ -58,13 +58,24 @@ public class ParamTesting {
     }
 
 
+    @DisplayName("Param Test")
+    @ParameterizedTest(name = "{displayName}: {index} ===> {arguments}")
+    @ArgumentsSource(DataArguments.class)
+    void myParamTesting5(String name, int age, String phone){
+
+        System.out.println("name "+ name);
+        System.out.println("age "+ age);
+        System.out.println("phone "+ phone);
+
+    }
+/*
 static Stream<Arguments>  getData(){
         return Stream.of(
                 Arguments.of("Ahmed" ,21,"1234,"),
                 Arguments.of("Karim" ,19,"012245,"),
                 Arguments.of("Jo"     ,12,"01223,")
         );
-}
+}*/
 
 
 }
