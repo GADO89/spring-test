@@ -3,17 +3,27 @@ package com.spring.junit;
 import org.assertj.core.api.Assertions;
 import org.hamcrest.MatcherAssert;
 import org.hamcrest.Matchers;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Nested;
-import org.junit.jupiter.api.Tag;
-import org.junit.jupiter.api.Test;
-
+import org.junit.jupiter.api.*;
 
 
 @Tag("student")
 class StudentTest {
 
-    @BeforeEach
+
+    @Test
+    @DisplayName("Hi Function")
+    @RepeatedTest(value = 5, name = "{displayName} :")
+    void myTest(){
+        System.out.println("Hi");
+    }
+
+
+    }
+
+   /*
+
+
+      @BeforeEach
     void setUp() {
         System.out.println("Out");
     }
@@ -45,9 +55,11 @@ class StudentTest {
 
     }
 
-    }
 
-   /* @Test
+
+
+
+    @Test
     @DisplayName("Test Student  By Id")
     void findById() {
         Student student=new Student();
