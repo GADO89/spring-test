@@ -2,8 +2,28 @@ package com.spring.junit;
 
 import org.junit.jupiter.api.*;
 //@Disabled
-@Tag("person")
-class PersonTest {
+
+class PersonTest implements PersonInterface{
+
+  /*  @BeforeEach
+    void setUp() {
+        System.out.println(" @BeforeEach....................");
+    }*/
+
+    @Test
+    void simpleTest(){
+        System.out.println("simpleTest.................");
+    }
+
+
+}
+
+
+
+
+
+/*
+
 
     @Test
     void personTest1() {
@@ -14,13 +34,13 @@ class PersonTest {
         System.out.println("2222222222222222");
         Person person=new Person();
 
-        /*
+
         Assertions.assertAll("Student Data",
                 ()-> Assertions.assertEquals(person.getFName(),"Eslam","F name not machtes"),
                 ()-> Assertions.assertEquals(person.geTlName(), "Khder", "L name not machtes"),
                 ()-> Assertions.assertEquals(person.getPhone1(), "01125589989", "Phone not machtes"),
                 ()-> Assertions.assertEquals(person.getPhone2(), "011111111111", "Phone not machtes")
-        );*/
+        );
 
         Assertions.assertAll("Person Data",
                 ()->Assertions.assertAll("Person Names",
@@ -33,13 +53,8 @@ class PersonTest {
                 )
         );
 
-    }
-
-
-
 }
 
-/*
 
 
 @Test
